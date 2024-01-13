@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #EC5C2C;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.7em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 1300px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.large {
+  font-size: 1.25rem;
+}
+
+.display-1 {
+  font-size: 5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-light {
+  background-color: #FFF;
+  color: #EC5C2C;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.btn-dark {
+  background-color: #EC5C2C;
+  border: none;
+  color: #FFF;
+  border-radius: 20px;
+  width: 100%;
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+form .form-group {
+  margin-bottom: 16px;
+}
+form .form-control {
+  width: 100%;
+  padding: 7px 12px;
+  border: none;
+  border: 1px solid #CED4DA;
+  border-radius: 20px;
+}
+
+#mainheader {
+  color: #FFF;
+}
+#mainheader h1 {
+  font-weight: 200;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+#navbar {
+  background-color: #EC5C2C;
+  overflow: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#navbar a {
+  color: #FFF;
+}
+#navbar .logo {
+  float: left;
+  padding-top: 5px;
+  font-size: 25px;
+  height: 60px;
+}
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+#navbar ul li {
+  float: left;
+}
+#navbar ul li .btn {
+  color: #EC5C2C;
+}
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#showcase {
+  background: #EC5C2C;
+  text-align: center;
+  padding: 20px;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+#showcase h1 {
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.2em;
+}
+#showcase a {
+  margin: 20px 30px 30px 20px;
+}
+
+#services {
+  padding: 60px 0;
+}
+#services h2, #services h6 {
+  text-align: center;
+}
+#services .services-row {
+  padding-top: 30px;
+  display: flex;
+}
+#services .services-row-box {
+  padding: 30px;
+  margin: 20px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+#services .services-row-box img {
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+#services .services-row-box h4 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+#about {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+#about .about-row {
+  padding-top: 30px;
+  display: flex;
+}
+#about .about-row-box {
+  padding: 20px;
+}
+#about .about-row-box img {
+  width: 400px;
+  padding-right: 20px;
+  padding-top: 50px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 40px;
+}
+
+#contact {
+  padding: 60px 0;
+}
+#contact .contact-box {
+  background: #29285A;
+  color: #FFF;
+  padding: 80px;
+  margin: 20px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+#contact .contact-box h6, #contact .contact-box h2 {
+  color: #FFF;
+  text-align: center;
+}
+#contact .contact-box form {
+  padding-top: 50px;
+  width: 60%;
+  margin: 0 auto;
+}
+#contact .contact-box form button {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+#mainfooter {
+  background: #EC5C2C;
+  color: #FFF;
+  text-align: center;
+  padding: 30px;
+}
+
+@media (max-width: 700px) {
+  .display-1 {
+    font-size: 3rem;
+  }
+  #navbar .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #navbar ul {
+    float: none;
+  }
+  #showcase {
+    padding: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  #services .services-row {
+    flex-wrap: wrap;
+  }
+  #services .services-row-box {
+    padding: 20px;
+    margin: 10px;
+  }
+  #about {
+    padding: 20px 0;
+  }
+  #about .about-row {
+    padding-top: 0px;
+    flex-wrap: wrap;
+  }
+  #contact {
+    padding: 50px 0;
+  }
+  #contact .contact-box {
+    padding: 20px;
+    margin: 0px;
+  }
+  #contact .contact-box form {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
