@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>nmda</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -13,9 +14,10 @@
       <div class="container">
         <img class="logo" src="img/logoipsum-220.svg" alt="logo">
         <ul>
-          <li><a href="#mainheader">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#mainheader">Inicio</a></li>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#plans">Planes</a></li>
           <li><a href="#contact" class="btn btn-light">Contact</a></li>        
         </ul>
       </div>
@@ -71,6 +73,79 @@
     </div>
   </section>
 
+<!--   <section id="plans" class="hidden">
+    <h2>📦 Elige el plan que mejor se adapte a tu negocio</h2>
+    <table>
+        <tr>
+            <th>Paquete</th>
+            <th>Starter 🚀</th>
+            <th>Pro 💼</th>
+            <th>Premium 🎯</th>
+        </tr>
+        <tr>
+            <td>Diseño Web</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Optimización SEO</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Tienda en línea</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Soporte técnico</td>
+            <td>Básico</td>
+            <td>Avanzado</td>
+            <td>Premium</td>
+        </tr>
+        <tr>
+            <td>Tiempo de entrega</td>
+            <td>7 días</td>
+            <td>14 días</td>
+            <td>21 días</td>
+        </tr>
+        <tr>
+            <td>Precio</td>
+            <td>$3,500 MXN</td>
+            <td>$8,000 MXN</td>
+            <td>$25,000 MXN+</td>
+        </tr>
+    </table>
+    <a href="#contact" class="btn">Consulta los detalles y personaliza tu paquete</a>
+</section> -->
+
+<section id="pricing" class="py-20 bg-gray-900 text-white text-center">
+  <h2 class="text-4xl font-bold">💰 Planes y Precios</h2>
+  <div class="mt-10 flex flex-wrap justify-center gap-10">
+    <div class="bg-gray-800 p-6 rounded-lg w-72 text-center">
+      <h3 class="text-2xl font-bold">Básico</h3>
+      <p class="mt-4 text-lg">Ideal para pequeñas empresas.</p>
+      <p class="mt-2 text-2xl font-bold">$99/mes</p>
+      <a href="#" class="mt-4 inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Contratar</a>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg w-72 text-center">
+      <h3 class="text-2xl font-bold">Premium</h3>
+      <p class="mt-4 text-lg">Para negocios en crecimiento.</p>
+      <p class="mt-2 text-2xl font-bold">$199/mes</p>
+      <a href="#" class="mt-4 inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Contratar</a>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg w-72 text-center">
+      <h3 class="text-2xl font-bold">Empresarial</h3>
+      <p class="mt-4 text-lg">Para grandes empresas.</p>
+      <p class="mt-2 text-2xl font-bold">$299/mes</p>
+      <a href="#" class="mt-4 inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Contratar</a>
+    </div>
+  </div>
+</section>
+
   <section id="contact">
     <div class="container">
       <div class="contact-box">
@@ -95,7 +170,12 @@
     </div>
   </section>
   <section id="mainfooter">
-    <p>&copy; 2023 | This website was made by me.</p>
+    <p>&copy; <span id="fullyear"></span> | Todos los derechos reservados.</p>
   </section>  
+  <script>
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("fullyear").innerHTML = year;
+  </script>
 </body>
 </html>
