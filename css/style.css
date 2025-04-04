@@ -246,43 +246,85 @@ form .form-control {
 }
 
 #plans {
-  padding: 60px 0;
-}
-#plans h2, #plans h6 {
+  padding: 80px 0;
   text-align: center;
+  background: #f9f9f9;
+}
+#plans h6 {
+  color: #EC5C2C;
+  font-weight: 700;
+}
+#plans .container {
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+#plans .plans-subtitle {
+  max-width: 700px;
+  margin: 10px auto 30px;
+  font-size: 1.2rem;
+  color: rgb(24.9153846154, 24.3076923077, 54.6923076923);
 }
 #plans .plans-row {
-  padding-top: 30px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
-#plans .plans-row-box {
-  padding: 30px;
-  margin: 20px;
-  background: #f9f9f9;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+#plans .plan-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#plans .plans-row-box img {
-  height: 200px;
-  display: block;
-  margin: 0 auto;
-  padding: 20px;
+#plans .plan-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
-#plans .plans-row-box h4 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 500;
+#plans .plan-box h4 {
+  font-size: 1.5rem;
+  color: #29285A;
+  margin-bottom: 10px;
 }
-#plans .plans-row-box .btn {
-  margin-top: 20px;
-  text-transform: uppercase;
+#plans .plan-box p {
   font-size: 1rem;
-  padding: 10px 20px;
+  color: rgb(65.1269230769, 63.5384615385, 142.9615384615);
+  margin-bottom: 15px;
 }
-#plans .plans-row-box .price {
-  font-size: 2rem;
-  color: #EC5C2C;
-  font-weight: 600;
+#plans .plan-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+#plans .plan-box ul li {
+  font-size: 1rem;
+  padding: 5px 0;
+  color: rgb(236.5925925926, 103.7962962963, 60.4074074074);
+}
+#plans .plan-box .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+#plans .plan-box .btn:hover {
+  transform: scale(1.05);
+}
+#plans .plan-box .btn-primary {
+  background: #EC5C2C;
+  color: white;
+}
+#plans .plan-box .btn-secondary {
+  background: #29285A;
+  color: white;
+}
+#plans .plan-box.featured {
+  border: 3px solid #EC5C2C;
+  transform: scale(1.05);
 }
 
 #contact {
@@ -352,6 +394,16 @@ form .form-control {
   #about .about-row {
     padding-top: 0px;
     flex-wrap: wrap;
+  }
+  #about .about-row-box {
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  #about .about-row-box img {
+    width: 100%;
+    height: auto;
   }
   #contact {
     padding: 50px 0;

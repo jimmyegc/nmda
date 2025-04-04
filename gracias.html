@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Gracias por tu mensaje!</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Tu hoja principal si deseas -->
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #29285A;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .thanks-box {
+      max-width: 600px;
+      background: #EC5C2C;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #FFF;
+      color: #EC5C2C;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    a.btn:hover {
+      background-color: #f2f2f2;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="thanks-box">
+    <h1>¡Gracias por contactarnos!</h1>
+    <p>Hemos recibido tu mensaje y pronto nos pondremos en contacto contigo. <br/> ¡Estamos emocionados de conocer tu proyecto!</p>
+    <a href="/" class="btn">Volver al inicio</a>
+  </div>
+</body>
+</html>

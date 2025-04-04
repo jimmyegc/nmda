@@ -11,23 +11,8 @@
   <meta name="theme-color" content="#000000">  
   <title>nmda | Desarrollo Web</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <style>    
-    .plans-row { display: flex; flex-wrap: wrap; justify-content: space-between; }
-    .plan-box { flex: 1 1 calc(33% - 20px); box-sizing: border-box; margin: 10px; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    /*.plan-box { padding: 30px; margin: 20px; background: #f9f9f9; border-radius: 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); }*/
-    .plan-box img { height: 100px; display: block; margin: 0 auto 10px; }    
-    .plan-box ul { list-style: none; padding: 0; }
-    .plan-box ul li:before { content: "✔"; color: #EC5C2C; position: absolute; left: 0; top: 0; font-size: 20px; }
-    .plan-box ul li { margin: 10px 0; padding-left: 20px; position: relative; }
-    /*.btn { display: inline-block; padding: 10px 20px; background: #EC5C2C; color: #FFF; border-radius: 5px; text-decoration: none; transition: background 0.3s ease; }
-    .btn:hover { background: #d44a2b; }
-    .btn-light { background: #fff; color: #000; border: 2px solid #EC5C2C; }
-    .btn-light:hover { background: #EC5C2C; color: #fff; }
-    */
-    .price { display: block; padding: 10px; text-align: center; background: #EC5C2C; color: #FFF; border-radius: 10px; margin-top: 15px; }
-    .price:hover { background: #d44a2b; }    
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4x"></script>
+  <link rel="stylesheet" href="css/style.css">  
 </head>
 <body>
 
@@ -58,21 +43,23 @@
         <h6>Nuestros Servicios</h6>
         <h2>Transformamos tus ideas en soluciones digitales innovadoras.</h2>
         <div class="services-row">
+          <div class="services-row-box">
+            <img src="./img/platform.png" alt="icon">
+            <h4>Experiencia Digital e Innovación</h4>
+            <p>Diseñamos experiencias digitales atractivas con tecnología avanzada, ofreciendo interfaces intuitivas e interactivas.</p>
+        </div>
+        <div class="services-row-box">
+          <img src="./img/576204.png" alt="icon">
+          <h4>Creación de Páginas Web</h4>
+          <p>Construimos sitios web modernos, rápidos y optimizados para cualquier dispositivo, asegurando una presencia digital efectiva.</p>
+      </div>  
             <div class="services-row-box">
                 <img src="./img/coding.png" alt="icon">
                 <h4>Desarrollo de Software a la Medida</h4>
                 <p>Diseñamos y desarrollamos software personalizado que optimiza procesos, mejora la eficiencia y potencia el crecimiento de tu negocio.</p>
             </div>        
-            <div class="services-row-box">
-                <img src="./img/576204.png" alt="icon">
-                <h4>Creación de Páginas Web</h4>
-                <p>Construimos sitios web modernos, rápidos y optimizados para cualquier dispositivo, asegurando una presencia digital efectiva.</p>
-            </div>              
-            <div class="services-row-box">
-                <img src="./img/platform.png" alt="icon">
-                <h4>Experiencia Digital e Innovación</h4>
-                <p>Diseñamos experiencias digitales atractivas con tecnología avanzada, ofreciendo interfaces intuitivas e interactivas.</p>
-            </div>
+                   
+            
             <div class="services-row-box">
                 <img src="./img/saas.png" alt="icon">
                 <h4>SaaS y Soluciones en la Nube</h4>
@@ -86,8 +73,7 @@
   <section id="about">
     <div class="container">
       <div class="about-row">
-        <div class="about-row-box">
-          <!-- <img src="https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg" alt=""> -->
+        <div class="about-row-box">                    
           <img src="./img/pexels-mizunokozuki-12902874.jpg" alt="" />
         </div>
         <div class="about-row-box">
@@ -101,68 +87,82 @@
   </section>
 
   <section id="plans">
-    <div class="container">
-      <h6>Elige el plan ideal para tu negocio</h6>
-      <h2>Ofrecemos planes flexibles diseñados para empresas de todos los tamaños. Desde emprendedores hasta grandes corporaciones, tenemos una solución a la medida para ti.</h2>
+    <div>
+      <h6>Planes a tu medida</h6>
+      <h2>Encuentra la mejor opción para tu negocio</h2>
+      <p class="plans-subtitle">
+        Diseñamos soluciones flexibles para emprendedores y empresas consolidadas. 
+        Elige el plan ideal y da el siguiente paso en tu presencia digital.
+      </p>
+      
       <div class="plans-row">
         <div class="plan-box">
           <h4>Plan Básico</h4>
-          <p>Para negocios que buscan presencia en línea con un sitio web profesional y optimizado.</p>
+          <p>Para negocios que buscan una presencia en línea con un sitio web optimizado.</p>
           <ul>
-            <li>1-page website</li>
-            <li>Basic SEO</li>
-            <li>Contact form</li>
+            <li>✔ 1 página web</li>
+            <li>✔ SEO básico</li>
+            <li>✔ Formulario de contacto</li>
           </ul>
-          <a href="#contact" class="btn price">Comenzar</a>
+          <a href="#contact" class="btn btn-primary">Solicitar</a>
         </div>
-        <div class="plan-box">
+  
+        <div class="plan-box featured">
           <h4>Plan Premium</h4>
-          <p>Ideal para empresas en crecimiento que necesitan una estrategia digital completa.</p>
+          <p>Ideal para empresas en crecimiento con una estrategia digital sólida.</p>
           <ul>
-            <li>Multi-page website</li>
-            <li>Advanced SEO</li>
-            <li>Custom Design</li>
+            <li>✔ Sitio web multipágina</li>
+            <li>✔ SEO avanzado</li>
+            <li>✔ Diseño personalizado</li>
           </ul>
-          <a href="#contact" class="btn price">Comenzar</a>
+          <a href="#contact" class="btn btn-secondary">Solicitar</a>
         </div>
+  
         <div class="plan-box">
           <h4>Plan Empresarial</h4>
-          <p>Solución integral con desarrollo web avanzado y estrategias de conversión.</p>
+          <p>Solución integral con desarrollo avanzado y estrategias de conversión.</p>
           <ul>
-            <li>Full eCommerce setup</li>
-            <li>Premium SEO</li>
-            <li>Custom Integrations</li>
+            <li>✔ eCommerce completo</li>
+            <li>✔ SEO premium</li>
+            <li>✔ Integraciones personalizadas</li>
           </ul>
-          <a href="#contact" class="btn price">Comenzar</a>
+          <a href="#contact" class="btn btn-primary">Solicitar</a>
         </div>
       </div>
     </div>
   </section>
-
+  
   <section id="contact">
     <div class="container">
       <div class="contact-box">
         <h2>Cuéntanos sobre tu proyecto.</h2>        
         <p>Nos encantaría conocer tu idea y ayudarte a hacerla realidad. <br/> Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
-        <form action="">
+  
+        <form name="contact" method="POST" data-netlify="true" action="/gracias.html">
+          <!-- Netlify form hidden input -->
+          <input type="hidden" name="form-name" value="contact" />
+  
           <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="text" class="form-control">
+            <input type="text" name="name" id="name" class="form-control" required>
           </div>
+  
           <div class="form-group">
             <label for="email">Correo electrónico</label>
-            <input type="email" class="form-control">
+            <input type="email" name="email" id="email" class="form-control" required>
           </div>
+  
           <div class="form-group">
             <label for="message">Mensaje</label>
-            <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" class="form-control" cols="30" rows="10" required></textarea>
           </div>
-          <button class="button">Enviar Mensaje</button>
-          <button class="button--outline">Hola</button>
+  
+          <button type="submit" class="btn btn-dark">Enviar Mensaje</button>
         </form>
       </div>      
     </div>
-  </section>  
+  </section>
+  
   <footer class="footer" id="mainfooter">
     <div class="container">
       <div class="footer__content">

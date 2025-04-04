@@ -257,44 +257,102 @@ form {
 
 // Plans
 #plans {
-  padding: 60px 0;
-  h2, h6 {
-    text-align: center;
+  padding: 80px 0;
+  text-align: center;
+  background: $gray-color;
+  
+  h6 {
+    color: $primary-color;
+    font-weight: 700;
   }
+
+  .container {
+    max-width: 1200px;
+    margin-bottom: 40px;
+  }
+
+  .plans-subtitle {
+    max-width: 700px;
+    margin: 10px auto 30px;
+    font-size: 1.2rem;
+    color: darken($secondary-color, 10%);
+  }
+
   .plans-row {
-    padding-top: 30px;
     display: flex;
-    &-box {
-      padding: 30px; 
-      margin: 20px;
-      background: $gray-color;
-      box-shadow: 2px 2px 2px rgba(0,0,0, 0.2);
-      border-radius: 20px;
-      img {
-        height: 200px;
-        display: block;
-        margin: 0 auto;
-        padding: 20px;
-      } 
-      h4 {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-weight: 500;
-      }
-      .btn {
-        margin-top: 20px;
-        text-transform: uppercase;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;    
+  }
+
+  .plan-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: lighten($secondary-color, 15%);
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+
+      li {
         font-size: 1rem;
-        padding: 10px 20px;
+        padding: 5px 0;
+        color: darken($third-color, 10%);
       }
-      .price {
-        font-size: 2rem;
-        color: $primary-color;
-        font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.05);
       }
-    } // End #plans .plans-row &-box
-  } // End #plans .plans-row
+    }
+
+    .btn-primary {
+      background: $primary-color;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: $secondary-color;
+      color: white;
+    }
+
+    &.featured {
+      border: 3px solid $primary-color;
+      transform: scale(1.05);
+    }
+  }
 }
+
 
 // Contact
 #contact {
