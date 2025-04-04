@@ -5,6 +5,7 @@ $primary-color: #EC5C2C;
 $secondary-color: #29285A;
 $third-color: #F18C6B;
 $gray-color: #f9f9f9;
+$text-color: #333;
 
 // Reset
 * {
@@ -19,6 +20,8 @@ body {
   font-family: $font-stack;
   line-height: 1.6;
   scroll-behavior: smooth;
+  color: $text-color;
+  background-color: #FFF;
 }
 
 h1 { font-size: 2.5rem; }
@@ -41,6 +44,14 @@ p {
 
 a { 
   text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: $primary-color;
+  color: #FFF;
+  text-align: center;
+  padding: 20px 0;  
 }
 
 // Utility Classes
@@ -48,7 +59,7 @@ a {
   margin: auto;
   max-width: 1200px;
   overflow: auto;
-  padding: 0 20px;  
+  padding: 0 20px;
 }
 
 .large {
@@ -65,6 +76,8 @@ a {
   padding: 12px 23px;
   font-weight: bold;
   letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .btn-light {
@@ -72,6 +85,10 @@ a {
   color: $primary-color;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  &:hover {
+    background-color: $third-color;
+    color: #FFF;
+  }
 }
 
 .btn-dark {
@@ -80,48 +97,10 @@ a {
   color: #FFF;
   border-radius: 20px;
   width: 100%;
-}
-
-.button {
-  font-family: $font-stack;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  color: #fff;
-  background-color: $primary-color;
-
   &:hover {
-    background-color: darken($primary-color, 10%);
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
-  }
-
-  &--secondary {
     background-color: $secondary-color;
-
-    &:hover {
-      background-color: lighten($secondary-color, 5%);
-      box-shadow: 0 6px 16px rgba($secondary-color, 0.3);
-    }
-  }
-
-  &--outline {
-    background-color: transparent;
-    border: 2px solid $primary-color;
-    color: $primary-color;
-
-    &:hover {
-      background-color: $primary-color;
-      color: #fff;
-      box-shadow: 0 6px 16px rgba($primary-color, 0.2);
-    }
   }
 }
-
 
 form {
   label {
@@ -134,11 +113,14 @@ form {
   .form-control {
     width: 100%;
     padding: 7px 12px;
-    border: none;
     border: 1px solid #CED4DA;
     border-radius: 20px;
-  } // form-control
-} // form
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+} 
 
 // Main Header
 #mainheader {
@@ -148,7 +130,7 @@ form {
     padding-top: 60px;
     padding-bottom: 30px;    
   }
-} // End #mainheader
+}
 
 // Navbar
 #navbar {
@@ -158,12 +140,15 @@ form {
   padding-bottom: 20px;
   a {
     color: #FFF;
+    &:hover {
+      color: $third-color;
+    }
   }
   .logo {
     float: left;
     padding-top: 5px;
     font-size: 25px;
-    height: 50px;
+    height: 120px;
   }
   ul {
     list-style: none;
@@ -178,9 +163,9 @@ form {
         padding: 20px;
         text-align: center;
       }
-    } // End #navbar ul li
-  } // End #navbar ul
-} // End #navbar
+    }
+  }
+}
 
 // Showcase
 #showcase {
@@ -197,7 +182,7 @@ form {
   a {
     margin: 20px 30px 30px 20px;
   }
-} // End #showcase
+}
 
 // Services
 #services {
@@ -208,7 +193,10 @@ form {
   .services-row {
     padding-top: 30px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     &-box {
+      flex: 1 1 300px;
       padding: 30px; 
       margin: 20px;
       background: $gray-color;
@@ -229,108 +217,8 @@ form {
         padding-bottom: 10px;
         font-weight: 500;
       }
-    } // End #services .services-row &-box
-  } // End #services .services-row
-} // End #services
-
-
-
-// About
-#about {
-  padding: 50px 0;
-  background: $gray-color;
-  .about-row {
-    padding-top: 30px;
-    display: flex;
-    &-box { 
-      padding: 20px;
-      img {
-        width: 400px;
-        padding-right: 20px;
-        padding-top: 50px;          
-        border-top-right-radius: 80px;
-        border-bottom-left-radius: 40px;
-      }
-    } // End #about .about-row &-box
-  } //  End #about-row
-} // End #about
-
-// Plans
-#plans {
-  padding: 60px 0;
-  h2, h6 {
-    text-align: center;
+    }
   }
-  .plans-row {
-    padding-top: 30px;
-    display: flex;
-    &-box {
-      padding: 30px; 
-      margin: 20px;
-      background: $gray-color;
-      box-shadow: 2px 2px 2px rgba(0,0,0, 0.2);
-      border-radius: 20px;
-      img {
-        height: 200px;
-        display: block;
-        margin: 0 auto;
-        padding: 20px;
-      } 
-      h4 {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-weight: 500;
-      }
-      .btn {
-        margin-top: 20px;
-        text-transform: uppercase;
-        font-size: 1rem;
-        padding: 10px 20px;
-      }
-      .price {
-        font-size: 2rem;
-        color: $primary-color;
-        font-weight: 600;
-      }
-    } // End #plans .plans-row &-box
-  } // End #plans .plans-row
 }
-
-// Contact
-#contact {
-  padding: 60px 0;
-  .contact-box {
-    background: $secondary-color;
-    color: #FFF;
-    padding: 80px;
-    margin: 20px;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 80px;
-    h6, h2 {
-      color: #FFF;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-      padding: 20px 0;
-    }
-    form {
-      padding-top: 50px;
-      width: 60%;
-      margin: 0 auto;
-      button {
-        width: 100%;
-        text-transform: uppercase;
-      }
-    }  // End #contact .contact-box form
-  } // End #contact .contact-box
-} // End #contact
-
-#mainfooter {
-  background: $primary-color;
-  color: #FFF;
-  text-align: center;
-  padding: 30px;  
-} // End Footer
 
 @import 'mobile';

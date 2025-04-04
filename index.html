@@ -1,177 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nmda</title>
-  <link rel="stylesheet" href="sass/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Impulsa tu negocio con diseño web de alto impacto y estrategias UX/UI. Trabajamos con startups y empresas para crear experiencias digitales irresistibles.">
+  <meta name="keywords" content="Diseño web, UX/UI, Desarrollo web, Estrategias digitales, Startups, Empresas, Experiencias digitales, nmda, nmda.dev">
+  <meta name="author" content="nmda">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#000000">  
+  <title>nmda | Desarrollo Web</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>    
+    .plans-row { display: flex; flex-wrap: wrap; justify-content: space-between; }
+    .plan-box { flex: 1 1 calc(33% - 20px); box-sizing: border-box; margin: 10px; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    /*.plan-box { padding: 30px; margin: 20px; background: #f9f9f9; border-radius: 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); }*/
+    .plan-box img { height: 100px; display: block; margin: 0 auto 10px; }    
+    .plan-box ul { list-style: none; padding: 0; }
+    .plan-box ul li:before { content: "✔"; color: #EC5C2C; position: absolute; left: 0; top: 0; font-size: 20px; }
+    .plan-box ul li { margin: 10px 0; padding-left: 20px; position: relative; }
+    /*.btn { display: inline-block; padding: 10px 20px; background: #EC5C2C; color: #FFF; border-radius: 5px; text-decoration: none; transition: background 0.3s ease; }
+    .btn:hover { background: #d44a2b; }
+    .btn-light { background: #fff; color: #000; border: 2px solid #EC5C2C; }
+    .btn-light:hover { background: #EC5C2C; color: #fff; }
+    */
+    .price { display: block; padding: 10px; text-align: center; background: #EC5C2C; color: #FFF; border-radius: 10px; margin-top: 15px; }
+    .price:hover { background: #d44a2b; }    
+  </style>
 </head>
 <body>
 
   <header id="mainheader">
     <nav id="navbar">
-      <div class="container">
-        <img class="logo" src="img/nmda.png" alt="logo">        
+      <div class="container">        
+        <img class="logo" src="./img/nmda-logo.svg" alt="logo">                
         <ul>
           <li><a href="#mainheader">Inicio</a></li>
-          <li><a href="#about">Sobre Nosotros</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#plans">Planes</a></li>
-          <li><a href="#contact" class="btn btn-light">Contact</a></li>        
+          <li><a href="#about">Acerca de Nosotros</a></li>
+          <li><a href="#contact" class="btn btn-light">Contáctanos</a></li>        
         </ul>
       </div>
     </nav>
 
     <div id="showcase">
       <div class="container">
-        <h1 class="display-1">We build <br> digital experiencies</h1>
-        <p class="large">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <a href="#contact" class="btn btn-light">Contact Us</a>
+        <h1 class="display-1">Impulsamos tu negocio <br> con tecnología y diseño innovador.</h1>
+        <p class="large">Creamos soluciones digitales a la medida para potenciar tu marca y aumentar tu presencia en línea.</p>
+        <a href="#contact" class="btn btn-light">Contáctanos</a>
       </div>
     </div>
   </header>
 
   <section id="services">
     <div class="container">
-      <h6>What We Do</h6>
-      <h2>We make your dream visually true</h2>
-      <div class="services-row">
-        <div class="services-row-box">
-          <img src="https://cdn-icons-png.flaticon.com/128/576/576204.png" alt="icon">
-          <h4>Web Development</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet minima quae, repellat dicta, omnis minus alias sunt, cupiditate aspernatur molestias accusamus officiis est dolorem sed facilis nihil delectus fuga.</p>
-        </div>        
-        <div class="services-row-box">
-          <img src="https://cdn-icons-png.flaticon.com/128/7317/7317912.png" alt="icon">
-          <h4>UX / UI</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet minima quae, repellat dicta, omnis minus alias sunt, cupiditate aspernatur molestias accusamus officiis est dolorem sed facilis nihil delectus fuga.</p>
-        </div>              
-        <div class="services-row-box">
-          <img src="https://cdn-icons-png.flaticon.com/128/3249/3249904.png" alt="icon">
-          <h4>Copy Writting</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet minima quae, repellat dicta, omnis minus alias sunt, cupiditate aspernatur molestias accusamus officiis est dolorem sed facilis nihil delectus fuga.</p>
+        <h6>Nuestros Servicios</h6>
+        <h2>Transformamos tus ideas en soluciones digitales innovadoras.</h2>
+        <div class="services-row">
+            <div class="services-row-box">
+                <img src="./img/coding.png" alt="icon">
+                <h4>Desarrollo de Software a la Medida</h4>
+                <p>Diseñamos y desarrollamos software personalizado que optimiza procesos, mejora la eficiencia y potencia el crecimiento de tu negocio.</p>
+            </div>        
+            <div class="services-row-box">
+                <img src="./img/576204.png" alt="icon">
+                <h4>Creación de Páginas Web</h4>
+                <p>Construimos sitios web modernos, rápidos y optimizados para cualquier dispositivo, asegurando una presencia digital efectiva.</p>
+            </div>              
+            <div class="services-row-box">
+                <img src="./img/platform.png" alt="icon">
+                <h4>Experiencia Digital e Innovación</h4>
+                <p>Diseñamos experiencias digitales atractivas con tecnología avanzada, ofreciendo interfaces intuitivas e interactivas.</p>
+            </div>
+            <div class="services-row-box">
+                <img src="./img/saas.png" alt="icon">
+                <h4>SaaS y Soluciones en la Nube</h4>
+                <p>Desarrollamos plataformas SaaS escalables y seguras, permitiendo a las empresas ofrecer soluciones digitales eficientes en la nube.</p>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
 
   <section id="about">
     <div class="container">
       <div class="about-row">
         <div class="about-row-box">
-          <img src="https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg" alt="">
+          <!-- <img src="https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg" alt=""> -->
+          <img src="./img/pexels-mizunokozuki-12902874.jpg" alt="" />
         </div>
         <div class="about-row-box">
-          <h6>Who we are</h6>
-          <h2>This is us and some of our working process</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto in aperiam quaerat assumenda doloremque quam reprehenderit hic quisquam! Harum quas sequi saepe a rerum blanditiis, et aspernatur nostrum fuga earum ipsum eius. Ratione, harum. Ratione totam laborum culpa natus incidunt aut explicabo in. Laboriosam ipsa, autem, velit quae sint quibusdam perferendis non laudantium rerum dolorem iste quos. Maxime voluptates et iure accusantium ipsam quaerat at!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit nesciunt totam corrupti autem velit harum ratione eos dolorem facilis quod aperiam sapiente, veritatis doloribus assumenda molestias cum, reprehenderit nisi minus quia dignissimos explicabo. Sed fugiat, cumque sit temporibus mollitia cupiditate voluptatibus alias dolorum fugit tenetur, accusamus molestias, asperiores ullam ea neque. Necessitatibus neque veritatis tempora sequi quisquam expedita ipsa ab, culpa, dignissimos qui delectus provident iste animi voluptatibus perspiciatis officiis minima vitae magni deserunt ea temporibus distinctio nam ipsam.</p>
+          <h6>Sobre Nosotros</h6>
+          <h2>Expertos en desarrollo digital y diseño estratégico</h2>
+          <p>En nmda, creemos en el poder de la tecnología para hacer crecer negocios. Somos un equipo de expertos en desarrollo web, diseño UX/UI y estrategias digitales. Nos apasiona crear soluciones innovadoras que generan impacto y ayudan a nuestros clientes a alcanzar sus objetivos.</p>          
         </div>
       </div>
      
     </div>
   </section>
 
-<!--   <section id="plans" class="hidden">
-    <h2>📦 Elige el plan que mejor se adapte a tu negocio</h2>
-    <table>
-        <tr>
-            <th>Paquete</th>
-            <th>Starter 🚀</th>
-            <th>Pro 💼</th>
-            <th>Premium 🎯</th>
-        </tr>
-        <tr>
-            <td>Diseño Web</td>
-            <td>✅</td>
-            <td>✅</td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td>Optimización SEO</td>
-            <td>❌</td>
-            <td>✅</td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td>Tienda en línea</td>
-            <td>❌</td>
-            <td>✅</td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td>Soporte técnico</td>
-            <td>Básico</td>
-            <td>Avanzado</td>
-            <td>Premium</td>
-        </tr>
-        <tr>
-            <td>Tiempo de entrega</td>
-            <td>7 días</td>
-            <td>14 días</td>
-            <td>21 días</td>
-        </tr>
-        <tr>
-            <td>Precio</td>
-            <td>$3,500 MXN</td>
-            <td>$8,000 MXN</td>
-            <td>$25,000 MXN+</td>
-        </tr>
-    </table>
-    <a href="#contact" class="btn">Consulta los detalles y personaliza tu paquete</a>
-</section> -->
-
-<section id="pricing" class="py-20 bg-gray-900 text-white text-center">
-  <h2 class="text-4xl font-bold">💰 Planes y Precios</h2>
-  <div class="mt-10 flex flex-wrap justify-center gap-10">
-    <div class="bg-gray-800 p-6 rounded-lg w-72 text-center">
-      <h3 class="text-2xl font-bold">Básico</h3>
-      <p class="mt-4 text-lg">Ideal para pequeñas empresas.</p>
-      <p class="mt-2 text-2xl font-bold">$99/mes</p>
-      <a href="#" class="mt-4 inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Contratar</a>
+  <section id="plans">
+    <div class="container">
+      <h6>Elige el plan ideal para tu negocio</h6>
+      <h2>Ofrecemos planes flexibles diseñados para empresas de todos los tamaños. Desde emprendedores hasta grandes corporaciones, tenemos una solución a la medida para ti.</h2>
+      <div class="plans-row">
+        <div class="plan-box">
+          <h4>Plan Básico</h4>
+          <p>Para negocios que buscan presencia en línea con un sitio web profesional y optimizado.</p>
+          <ul>
+            <li>1-page website</li>
+            <li>Basic SEO</li>
+            <li>Contact form</li>
+          </ul>
+          <a href="#contact" class="btn price">Comenzar</a>
+        </div>
+        <div class="plan-box">
+          <h4>Plan Premium</h4>
+          <p>Ideal para empresas en crecimiento que necesitan una estrategia digital completa.</p>
+          <ul>
+            <li>Multi-page website</li>
+            <li>Advanced SEO</li>
+            <li>Custom Design</li>
+          </ul>
+          <a href="#contact" class="btn price">Comenzar</a>
+        </div>
+        <div class="plan-box">
+          <h4>Plan Empresarial</h4>
+          <p>Solución integral con desarrollo web avanzado y estrategias de conversión.</p>
+          <ul>
+            <li>Full eCommerce setup</li>
+            <li>Premium SEO</li>
+            <li>Custom Integrations</li>
+          </ul>
+          <a href="#contact" class="btn price">Comenzar</a>
+        </div>
+      </div>
     </div>
-    <div class="bg-gray-800 p-6 rounded-lg w-72 text-center">
-      <h3 class="text-2xl font-bold">Premium</h3>
-      <p class="mt-4 text-lg">Para negocios en crecimiento.</p>
-      <p class="mt-2 text-2xl font-bold">$199/mes</p>
-      <a href="#" class="mt-4 inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Contratar</a>
-    </div>
-    <div class="bg-gray-800 p-6 rounded-lg w-72 text-center">
-      <h3 class="text-2xl font-bold">Empresarial</h3>
-      <p class="mt-4 text-lg">Para grandes empresas.</p>
-      <p class="mt-2 text-2xl font-bold">$299/mes</p>
-      <a href="#" class="mt-4 inline-block px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">Contratar</a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="contact">
     <div class="container">
       <div class="contact-box">
-        <h6>Say hi</h6>
-        <h2>Let us know, how can we help you?</h2>
+        <h2>Cuéntanos sobre tu proyecto.</h2>        
+        <p>Nos encantaría conocer tu idea y ayudarte a hacerla realidad. <br/> Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
         <form action="">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">Nombre</label>
             <input type="text" class="form-control">
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Correo electrónico</label>
             <input type="email" class="form-control">
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message">Mensaje</label>
             <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
           </div>
-          <button class="btn btn-dark">Send</button>
+          <button class="button">Enviar Mensaje</button>
+          <button class="button--outline">Hola</button>
         </form>
       </div>      
     </div>
-  </section>
-  <section id="mainfooter">
-    <p>&copy; <span id="fullyear"></span> | Todos los derechos reservados.</p>
   </section>  
+  <footer class="footer" id="mainfooter">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__phone"><a href="tel:+525527885779">Tel: +52 55 2788 5779</a></p>
+        <div class="footer__socials">
+          <a href="#" class="footer__icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="footer__icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer__icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <p class="footer__copyright">&copy; <span id="fullyear"></span> NMDA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <style>
+    .footer {
+      background: #111;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer__phone a {
+      font-size: 1.2rem;
+      color: #fff;
+      /*text-decoration: none;*/
+      &:hover {
+        color: black;
+        text-decoration: underline;
+      }
+    } 
+    .footer__socials {
+      display: flex;
+      gap: 15px;
+    }
+    .footer__icon {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .footer__icon:hover {
+      /* color: #00aced; */
+      color: black;
+    }
+    .footer__copyright {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    @media (max-width: 600px) {
+      .footer__content {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+  
   <script>
     const d = new Date();
     let year = d.getFullYear();
