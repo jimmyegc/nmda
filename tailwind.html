@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NMDA | Nómada Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#29285A]">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="bg-[#EC5C2C] text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="text-2xl font-bold">nmda</div>
+      <ul class="flex gap-6">
+        <li><a href="#showcase" class="hover:underline">Inicio</a></li>
+        <li><a href="#services" class="hover:underline">Servicios</a></li>
+        <li><a href="#about" class="hover:underline">Nosotros</a></li>
+        <li><a href="#plans" class="hover:underline">Planes</a></li>
+        <li><a href="#contact" class="hover:underline">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SHOWCASE -->
+  <section id="showcase" class="bg-[#EC5C2C] text-white text-center py-20 rounded-b-[100px]">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight">Transformamos ideas en productos digitales</h1>
+      <p class="mt-6 text-lg">Diseño y desarrollo de software a la medida</p>
+      <div class="mt-8">
+        <a href="#contact" class="btn btn-light bg-white text-[#EC5C2C] rounded-tr-[20px] rounded-bl-[20px] px-6 py-3 font-semibold">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h6 class="text-[#EC5C2C] uppercase font-semibold mb-2">Servicios</h6>
+      <h2 class="text-3xl font-bold mb-10">¿Qué ofrecemos?</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="services-row-box bg-[#f9f9f9] p-6 rounded-2xl shadow hover:-translate-y-1 transition">
+          <img src="https://via.placeholder.com/200" class="mx-auto mb-4" alt="Servicio 1" />
+          <h4 class="text-xl font-semibold mb-2">Landing Pages</h4>
+          <p>Páginas impactantes y optimizadas para convertir visitantes en clientes.</p>
+        </div>
+        <div class="services-row-box bg-[#f9f9f9] p-6 rounded-2xl shadow hover:-translate-y-1 transition">
+          <img src="https://via.placeholder.com/200" class="mx-auto mb-4" alt="Servicio 2" />
+          <h4 class="text-xl font-semibold mb-2">Sistemas Web</h4>
+          <p>Desarrollo de software y plataformas web personalizadas.</p>
+        </div>
+        <div class="services-row-box bg-[#f9f9f9] p-6 rounded-2xl shadow hover:-translate-y-1 transition">
+          <img src="https://via.placeholder.com/200" class="mx-auto mb-4" alt="Servicio 3" />
+          <h4 class="text-xl font-semibold mb-2">Consultoría</h4>
+          <p>Te ayudamos a llevar tu idea al siguiente nivel digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 bg-[#f9f9f9]">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-6 md:mb-0">
+        <img src="https://via.placeholder.com/400" alt="Sobre Nosotros" class="rounded-tr-[80px] rounded-bl-[40px]" />
+      </div>
+      <div class="md:w-1/2 md:pl-12">
+        <h2 class="text-3xl font-bold mb-4">¿Quiénes somos?</h2>
+        <p class="text-lg">Somos un equipo apasionado por el diseño, el desarrollo y la innovación. Ayudamos a negocios a crecer digitalmente con soluciones a medida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section id="plans" class="py-20 bg-[#f9f9f9] text-center">
+    <div class="container mx-auto px-4">
+      <h6 class="text-[#EC5C2C] font-bold uppercase mb-2">Planes</h6>
+      <h2 class="text-3xl font-bold mb-6">Elige tu paquete ideal</h2>
+      <p class="max-w-2xl mx-auto mb-10">Tenemos opciones para negocios pequeños, medianos y grandes. Personalizamos si lo necesitas.</p>
+      <div class="flex flex-wrap justify-center gap-8">
+        <!-- Plan -->
+        <div class="bg-white p-6 rounded-xl shadow w-[300px] hover:-translate-y-1 transition">
+          <h4 class="text-2xl text-[#29285A] font-bold mb-2">Básico</h4>
+          <p class="mb-4">Ideal para comenzar</p>
+          <ul class="mb-6 text-[#F18C6B]">
+            <li>✔ 1 página web</li>
+            <li>✔ Hosting incluido</li>
+            <li>✔ Soporte 1 mes</li>
+          </ul>
+          <a href="#contact" class="btn bg-[#EC5C2C] text-white px-4 py-2 rounded-full">Elegir</a>
+        </div>
+        <!-- Plan Pro -->
+        <div class="bg-white p-6 rounded-xl shadow w-[300px] border-4 border-[#EC5C2C] transform scale-105">
+          <h4 class="text-2xl text-[#29285A] font-bold mb-2">Profesional</h4>
+          <p class="mb-4">Para negocios en crecimiento</p>
+          <ul class="mb-6 text-[#F18C6B]">
+            <li>✔ Sitio + blog</li>
+            <li>✔ Branding básico</li>
+            <li>✔ Soporte 3 meses</li>
+          </ul>
+          <a href="#contact" class="btn bg-[#29285A] text-white px-4 py-2 rounded-full">Elegir</a>
+        </div>
+        <!-- Plan Full -->
+        <div class="bg-white p-6 rounded-xl shadow w-[300px] hover:-translate-y-1 transition">
+          <h4 class="text-2xl text-[#29285A] font-bold mb-2">Corporativo</h4>
+          <p class="mb-4">Soluciones avanzadas</p>
+          <ul class="mb-6 text-[#F18C6B]">
+            <li>✔ Desarrollo completo</li>
+            <li>✔ Integraciones</li>
+            <li>✔ Soporte extendido</li>
+          </ul>
+          <a href="#contact" class="btn bg-[#EC5C2C] text-white px-4 py-2 rounded-full">Elegir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-[#29285A] text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h6 class="uppercase text-white">Contacto</h6>
+      <h2 class="text-3xl font-bold mb-6">¿Listo para comenzar?</h2>
+      <p class="mb-8">Llena el formulario y nos pondremos en contacto contigo.</p>
+      <form class="max-w-lg mx-auto text-left">
+        <div class="mb-4">
+          <label class="block mb-2">Nombre</label>
+          <input type="text" class="form-control w-full rounded-full p-3 text-[#29285A]" />
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2">Correo electrónico</label>
+          <input type="email" class="form-control w-full rounded-full p-3 text-[#29285A]" />
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2">Mensaje</label>
+          <textarea class="form-control w-full rounded-2xl p-3 text-[#29285A]" rows="4"></textarea>
+        </div>
+        <button class="button w-full uppercase">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="mainfooter" class="bg-[#EC5C2C] text-white text-center py-6">
+    <p>© 2025 NMDA. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

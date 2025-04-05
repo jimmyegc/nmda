@@ -9,7 +9,7 @@
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
   <meta name="theme-color" content="#000000">  
-  <title>nmda | Desarrollo Web</title>
+  <title>nmda | Desarrollamos Webs y Apps para Potenciar tu Negocio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4x"></script>
   <link rel="stylesheet" href="css/style.css">  
@@ -23,7 +23,7 @@
         <ul>
           <li><a href="#mainheader">Inicio</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#about">Acerca de Nosotros</a></li>
+          <li><a href="#about">Nosotros</a></li>
           <li><a href="#contact" class="btn btn-light">Contáctanos</a></li>        
         </ul>
       </div>
@@ -86,7 +86,7 @@
     </div>
   </section>
 
-  <section id="plans">
+  <section id="plans" style="visibility: hidden; display: none;">
     <div>
       <h6>Planes a tu medida</h6>
       <h2>Encuentra la mejor opción para tu negocio</h2>
@@ -173,9 +173,11 @@
           <a href="#" class="footer__icon"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
-      <p class="footer__copyright">&copy; <span id="fullyear"></span> NMDA. Todos los derechos reservados.</p>
+      <p class="footer__location text-center mt-2">Ciudad de México, México</p>
+      <p class="footer__copyright text-center mt-2">&copy; <span id="fullyear"></span> NMDA. Todos los derechos reservados.</p>
     </div>
   </footer>
+    
   <style>
     .footer {
       background: #111;
@@ -229,5 +231,16 @@
     let year = d.getFullYear();
     document.getElementById("fullyear").innerHTML = year;
   </script>
+  <!-- Botón flotante de WhatsApp -->
+  <a
+  href="https://wa.me/525527885779"
+  class="whatsapp-button"
+  target="_blank"
+  aria-label="Envíanos un mensaje por WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
 </body>
 </html>

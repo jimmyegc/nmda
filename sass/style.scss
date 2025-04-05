@@ -177,6 +177,10 @@ form {
         display: block;
         padding: 20px;
         text-align: center;
+        transition: all 0.3s ease;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     } // End #navbar ul li
   } // End #navbar ul
@@ -390,5 +394,32 @@ form {
   text-align: center;
   padding: 30px;  
 } // End Footer
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 1.5rem; // 24px
+  right: 1.5rem;  // 24px
+  z-index: 999;
+  background-color: #25D366; // Color oficial de WhatsApp
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: darken(#25D366, 10%);
+    transform: scale(1.05);
+  }
+
+  i {
+    pointer-events: none; // Previene clics en el ícono
+  }
+}
+
 
 @import 'mobile';
