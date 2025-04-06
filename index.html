@@ -10,8 +10,8 @@
   <meta name="googlebot" content="index, follow">
   <meta name="theme-color" content="#000000">  
   <title>nmda | Desarrollamos Webs y Apps para Potenciar tu Negocio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4x"></script>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
   <link rel="stylesheet" href="css/style.css">  
 </head>
 <body>
@@ -19,7 +19,7 @@
   <header id="mainheader">
     <nav id="navbar">
       <div class="container">        
-        <img class="logo" src="./img/nmda-logo.svg" alt="logo">                
+        <img class="logo" src="./img/nmda-logo.svg" alt="Logo NMDA">                
         <ul>
           <li><a href="#mainheader">Inicio</a></li>
           <li><a href="#services">Servicios</a></li>
@@ -28,7 +28,6 @@
         </ul>
       </div>
     </nav>
-
     <div id="showcase">
       <div class="container">
         <h1 class="display-1">Impulsamos tu negocio <br> con tecnología y diseño innovador.</h1>
@@ -40,49 +39,49 @@
 
   <section id="services">
     <div class="container">
-        <h6>Nuestros Servicios</h6>
-        <h2>Transformamos tus ideas en soluciones digitales innovadoras.</h2>
-        <div class="services-row">
-          <div class="services-row-box">
-            <img src="./img/platform.png" alt="icon">
-            <h4>Experiencia Digital e Innovación</h4>
-            <p>Diseñamos experiencias digitales atractivas con tecnología avanzada, ofreciendo interfaces intuitivas e interactivas.</p>
+      <h6>Nuestros Servicios</h6>
+      <h2>Transformamos tus ideas en soluciones digitales innovadoras.</h2>
+      <div class="services-row">
+        <div class="services-row-box">
+          <img src="./img/platform.png" alt="Ícono de experiencia digital e innovación">
+          <h4>Experiencia Digital e Innovación</h4>
+          <p>Diseñamos experiencias digitales atractivas con tecnología avanzada, ofreciendo interfaces intuitivas e interactivas.</p>
         </div>
         <div class="services-row-box">
-          <img src="./img/576204.png" alt="icon">
+          <img src="./img/576204.png" alt="Ícono de creación de páginas web modernas">
           <h4>Creación de Páginas Web</h4>
           <p>Construimos sitios web modernos, rápidos y optimizados para cualquier dispositivo, asegurando una presencia digital efectiva.</p>
-      </div>  
-            <div class="services-row-box">
-                <img src="./img/coding.png" alt="icon">
-                <h4>Desarrollo de Software a la Medida</h4>
-                <p>Diseñamos y desarrollamos software personalizado que optimiza procesos, mejora la eficiencia y potencia el crecimiento de tu negocio.</p>
-            </div>        
-                   
-            
-            <div class="services-row-box">
-                <img src="./img/saas.png" alt="icon">
-                <h4>SaaS y Soluciones en la Nube</h4>
-                <p>Desarrollamos plataformas SaaS escalables y seguras, permitiendo a las empresas ofrecer soluciones digitales eficientes en la nube.</p>
-            </div>
+        </div>  
+        <div class="services-row-box">
+          <img src="./img/coding.png" alt="Ícono de desarrollo de software personalizado">
+          <h4>Desarrollo de Software a la Medida</h4>
+          <p>Diseñamos y desarrollamos software personalizado que optimiza procesos, mejora la eficiencia y potencia el crecimiento de tu negocio.</p>
+        </div>                                       
+        <div class="services-row-box">
+          <img src="./img/saas.png" alt="Ícono de soluciones SaaS en la nube">
+          <h4>SaaS y Soluciones en la Nube</h4>
+          <p>Desarrollamos plataformas SaaS escalables y seguras, permitiendo a las empresas ofrecer soluciones digitales eficientes en la nube.</p>
         </div>
+      </div>
     </div>
-</section>
-
+  </section>
 
   <section id="about">
     <div class="container">
       <div class="about-row">
         <div class="about-row-box">                    
-          <img src="./img/pexels-mizunokozuki-12902874.jpg" alt="" />
+          <img 
+            src="./img/pexels-mizunokozuki-12902874.jpg" 
+            srcset="./img/pexels-mizunokozuki-12902874-small.jpg 600w, ./img/pexels-mizunokozuki-12902874.jpg 1200w" 
+            sizes="(max-width: 600px) 100vw, 50vw"
+            alt="Personas trabajando en equipo" />
         </div>
         <div class="about-row-box">
           <h6>Sobre Nosotros</h6>
           <h2>Expertos en desarrollo digital y diseño estratégico</h2>
           <p>En nmda, creemos en el poder de la tecnología para hacer crecer negocios. Somos un equipo de expertos en desarrollo web, diseño UX/UI y estrategias digitales. Nos apasiona crear soluciones innovadoras que generan impacto y ayudan a nuestros clientes a alcanzar sus objetivos.</p>          
         </div>
-      </div>
-     
+      </div>     
     </div>
   </section>
 
@@ -136,34 +135,30 @@
     <div class="container">
       <div class="contact-box">
         <h2>Cuéntanos sobre tu proyecto.</h2>        
-        <p>Nos encantaría conocer tu idea y ayudarte a hacerla realidad. <br/> Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
-  
-        <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" autocomplete="off" action="/gracias.html">
-            
+        <p>Nos encantaría conocer tu idea y ayudarte a hacerla realidad. <br/> Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>  
+        <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" autocomplete="off" action="/gracias.html">            
           <div class="form-group">
             <label for="name">Nombre</label>
             <input type="text" name="name" id="name" class="form-control" required>
-          </div>
-  
+          </div>  
           <div class="form-group">
             <label for="email">Correo electrónico</label>
             <input type="email" name="email" id="email" class="form-control" required>
-          </div>
-  
+          </div>  
           <div class="form-group">
             <label for="message">Mensaje</label>
             <textarea name="message" id="message" class="form-control" cols="30" rows="10" required></textarea>
           </div>
-
-          <div data-netlify-recaptcha="true" class="mx-auto p-2 mb-2"></div>
-  
+          <div class="form-group">
+            <div data-netlify-recaptcha="true"></div>            
+          </div>          
           <button type="submit" class="btn btn-dark">Enviar Mensaje</button>
         </form>
       </div>      
     </div>
   </section>
   
-  <footer class="footer" id="mainfooter">
+  <footer id="mainfooter" class="footer">
     <div class="container">
       <div class="footer__content">
         <p class="footer__phone"><a href="tel:+525527885779">Tel: +52 55 2788 5779</a></p>
@@ -176,71 +171,16 @@
       <p class="footer__location text-center mt-2">Ciudad de México, México</p>
       <p class="footer__copyright text-center mt-2">&copy; <span id="fullyear"></span> NMDA. Todos los derechos reservados.</p>
     </div>
-  </footer>
-    
-  <style>
-    .footer {
-      background: #111;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-    .footer__content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .footer__phone a {
-      font-size: 1.2rem;
-      color: #fff;
-      /*text-decoration: none;*/
-      &:hover {
-        color: black;
-        text-decoration: underline;
-      }
-    } 
-    .footer__socials {
-      display: flex;
-      gap: 15px;
-    }
-    .footer__icon {
-      color: #fff;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-    .footer__icon:hover {
-      /* color: #00aced; */
-      color: black;
-    }
-    .footer__copyright {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-    @media (max-width: 600px) {
-      .footer__content {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
-  
-  <script>
-    const d = new Date();
-    let year = d.getFullYear();
-    document.getElementById("fullyear").innerHTML = year;
-  </script>
+  </footer>       
   <!-- Botón flotante de WhatsApp -->
   <a
-  href="https://wa.me/525527885779"
-  class="whatsapp-button"
-  target="_blank"
-  aria-label="Envíanos un mensaje por WhatsApp"
->
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-
+    href="https://wa.me/525527885779"
+    class="whatsapp-button"
+    target="_blank"
+    aria-label="Envíanos un mensaje por WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <script src="js/app.js"></script>
 </body>
 </html>

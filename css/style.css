@@ -360,11 +360,62 @@ form .form-control {
   text-transform: uppercase;
 }
 
-#mainfooter {
-  background: #EC5C2C;
-  color: #FFF;
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 30px;
+}
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer__phone a {
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.footer__phone a:hover {
+  color: #f9f9f9;
+  text-decoration: underline;
+}
+.footer__socials {
+  display: flex;
+  gap: 15px;
+}
+.footer__icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.footer__icon:hover {
+  color: #f9f9f9;
+}
+.footer__icon i {
+  pointer-events: none;
+}
+.footer__location {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+.footer__copyright {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 .whatsapp-button {
@@ -392,6 +443,9 @@ form .form-control {
 }
 
 @media (max-width: 700px) {
+  body {
+    padding-bottom: 80px;
+  }
   .display-1 {
     font-size: 3rem;
   }

@@ -18,7 +18,7 @@ html,
 body {
   font-family: $font-stack;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
 }
 
 h1 { font-size: 2.5rem; }
@@ -48,7 +48,7 @@ a {
   margin: auto;
   max-width: 1200px;
   overflow: auto;
-  padding: 0 20px;  
+  padding: 0 20px;    
 }
 
 .large {
@@ -388,13 +388,76 @@ form {
   } // End #contact .contact-box
 } // End #contact
 
-#mainfooter {
-  background: $primary-color;
-  color: #FFF;
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 30px;  
-} // End Footer
 
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;    
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__phone {
+    a {
+      font-size: 1.2rem;
+      color: #fff;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $gray-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__icon {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $gray-color;
+    }
+
+    i {
+      pointer-events: none; // Hace que el ícono no interrumpa el hover del link
+    }
+  }
+
+  &__location {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+
+  &__copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+}
+
+// WhatsApp Button
 .whatsapp-button {
   position: fixed;
   bottom: 1.5rem; // 24px
@@ -420,6 +483,5 @@ form {
     pointer-events: none; // Previene clics en el ícono
   }
 }
-
 
 @import 'mobile';
