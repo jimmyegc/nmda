@@ -1,3 +1,9 @@
-const d = new Date();
-let year = d.getFullYear();
-document.getElementById("fullyear").innerHTML = year;
+document.addEventListener("DOMContentLoaded", function () {
+    const getCurrentYear = () => {
+        const d = new Date();    
+        return d.getFullYear();
+    }
+
+    let year = getCurrentYear();
+    document.getElementById("currentyear").innerHTML = year;
+});
