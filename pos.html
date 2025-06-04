@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POS + Turnos | TuNegocio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #29285A;
+    }
+    header, section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    #hero {
+      background: linear-gradient(135deg, #EC5C2C, #F18C6B);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    #hero p {
+      font-size: 1.25rem;
+    }
+    #hero a {
+      display: inline-block;
+      margin-top: 20px;
+      background: white;
+      color: #EC5C2C;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    #beneficios ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 0;
+    }
+    #beneficios li {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    #caracteristicas div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    #caracteristicas h3 {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      color: #EC5C2C;
+    }
+    .plan {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .plan strong {
+      font-size: 1.5rem;
+      color: #29285A;
+      display: block;
+      margin-top: 10px;
+    }
+    #precios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding-bottom: 80px;
+    }
+    #cta {
+      background: #29285A;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    #cta a {
+      display: inline-block;
+      background: #F18C6B;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="hero">
+    <h1>Tu negocio, un paso adelante</h1>
+    <p>Agenda, vende y crece. Todo en un solo lugar.</p>
+    <a href="#precios">Ver Planes</a>
+  </section>
+
+  <section id="beneficios">
+    <h2>¿Por qué elegirnos?</h2>
+    <ul>
+      <li>Agenda y POS en una sola plataforma</li>
+      <li>Recordatorios automáticos por WhatsApp</li>
+      <li>Reportes y métricas para tu crecimiento</li>
+      <li>Multisucursal, multiusuario y control total</li>
+    </ul>
+  </section>
+
+  <section id="caracteristicas">
+    <h2>Todo lo que necesitas</h2>
+    <div>
+      <div>
+        <h3>Agenda inteligente</h3>
+        <p>Visualiza y administra tus turnos fácilmente</p>
+      </div>
+      <div>
+        <h3>Ventas rápidas</h3>
+        <p>Procesa pagos y emite tickets desde un mismo lugar</p>
+      </div>
+      <div>
+        <h3>Clientes felices</h3>
+        <p>Segmenta, fideliza y mantén el contacto</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="plan">
+      <h3>Básico</h3>
+      <p>POS, 1 usuario, Agenda</p>
+      <strong>$25 USD/mes</strong>
+    </div>
+    <div class="plan">
+      <h3>Profesional</h3>
+      <p>Hasta 5 usuarios, WhatsApp, Reportes</p>
+      <strong>$49 USD/mes</strong>
+    </div>
+    <div class="plan">
+      <h3>Empresa</h3>
+      <p>Sucursales, Inventario, Roles</p>
+      <strong>$79 USD/mes</strong>
+    </div>
+  </section>
+
+  <section id="cta">
+    <h2>Empieza gratis hoy</h2>
+    <p>Prueba la plataforma durante 14 días sin compromiso.</p>
+    <a href="#">Crear mi cuenta</a>
+  </section>
+
+</body>
+</html>
