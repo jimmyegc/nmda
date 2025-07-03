@@ -10,6 +10,8 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -47,6 +49,11 @@ p {
 
 a {
   text-decoration: none;
+}
+
+input, textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
 }
 
 .container {
@@ -148,33 +155,36 @@ form .form-control {
 
 #navbar {
   background-color: #EC5C2C;
-  overflow: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
-#navbar a {
-  color: #FFF;
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#navbar .logo {
-  float: left;
-  padding-top: 5px;
-  font-size: 25px;
-  height: 50px;
+#navbar .container-logo {
+  display: flex;
+  align-items: center;
+}
+#navbar .container-logo img.logo {
+  height: 70px;
+  width: auto;
+  max-height: 80px;
 }
 #navbar ul {
   list-style: none;
-  float: right;
-}
-#navbar ul li {
-  float: left;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 #navbar ul li .btn {
   color: #EC5C2C;
 }
 #navbar ul li a {
   display: block;
-  padding: 20px;
+  padding: 10px 15px;
   text-align: center;
+  color: #FFF;
   transition: all 0.3s ease;
 }
 #navbar ul li a:hover {
@@ -363,20 +373,22 @@ form .form-control {
 .footer {
   background: #111;
   color: #fff;
-  padding: 20px 0;
+  padding: 40px 0 20px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .footer .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  background-color: greenyellow;
 }
 .footer__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 @media (max-width: 600px) {
   .footer__content {
@@ -390,7 +402,7 @@ form .form-control {
   transition: color 0.3s ease;
 }
 .footer__phone a:hover {
-  color: black;
+  color: #f9f9f9;
   text-decoration: underline;
 }
 .footer__socials {
@@ -403,7 +415,7 @@ form .form-control {
   transition: color 0.3s ease;
 }
 .footer__icon:hover {
-  color: black;
+  color: #f9f9f9;
 }
 .footer__icon i {
   pointer-events: none;
@@ -419,22 +431,14 @@ form .form-control {
   opacity: 0.7;
 }
 
-/*
-#mainfooter {
-  background: $primary-color;
-  color: #FFF;
-  text-align: center;
-  padding: 30px;  
-}
-*/
 .whatsapp-button {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 999;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
   background-color: #25D366;
   color: #fff;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-size: 1.5rem;
@@ -443,26 +447,29 @@ form .form-control {
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.whatsapp-button i {
+  pointer-events: none;
+}
 .whatsapp-button:hover {
   background-color: #1da851;
   transform: scale(1.05);
 }
-.whatsapp-button i {
-  pointer-events: none;
-}
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .display-1 {
     font-size: 3rem;
   }
+  #navbar .container {
+    flex-direction: column;
+  }
   #navbar .logo {
-    float: none;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-bottom: 10px;
   }
   #navbar ul {
-    float: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
   }
   #showcase {
     padding: 10px;
@@ -504,5 +511,9 @@ form .form-control {
     padding: 20px;
     width: 100%;
     margin: 0 auto;
+  }
+  .whatsapp-button {
+    bottom: 20px;
+    right: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

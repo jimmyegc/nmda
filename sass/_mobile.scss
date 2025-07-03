@@ -1,23 +1,25 @@
-@media(max-width: 700px) {
-    body {
-      padding-bottom: 80px;
-    }
-       
+@media(max-width: 768px) {
+           
     .display-1 {
       font-size: 3rem;
     }    
        
     // Navbar
     #navbar {
+
+      .container {
+        flex-direction: column;
+      }
       
       .logo {
-        float: none;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 20px;
+        justify-content: center;
+        margin-bottom: 10px;
       }
+
       ul {        
-        float: none;        
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;      
       } // End #navbar ul
     } // End #navbar
     
@@ -71,4 +73,14 @@
         }  // End #contact .contact-box form
       } // End #contact .contact-box
     } // End #contact    
+
+    #mainfooter {
+    
+          
+    }
+
+    .whatsapp-button {
+      bottom: 20px;
+      right: 20px;
+    }
 }

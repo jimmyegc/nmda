@@ -19,6 +19,8 @@ body {
   font-family: $font-stack;
   line-height: 1.6;
   scroll-behavior: smooth;  
+  height: 100%;
+  overflow-x: hidden;
 }
 
 h1 { font-size: 2.5rem; }
@@ -160,38 +162,51 @@ form {
 // Navbar
 #navbar {
   background-color: $primary-color;
-  overflow: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  a {
-    color: #FFF;
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .logo {
-    float: left;
-    padding-top: 5px;
-    font-size: 25px;
-    height: 50px;
+
+  .container-logo {
+    display: flex;
+    align-items: center;
+
+    img.logo {
+      height: 70px;
+      width: auto;
+      max-height: 80px;
+    }
   }
+
   ul {
     list-style: none;
-    float: right;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
     li {
-      float: left;
       .btn {
         color: $primary-color;
       }
+
       a {
         display: block;
-        padding: 20px;
+        padding: 10px 15px;
         text-align: center;
+        color: #FFF;
         transition: all 0.3s ease;
+
         &:hover {
           text-decoration: underline;
         }
       }
-    } // End #navbar ul li
-  } // End #navbar ul
-} // End #navbar
+    }
+  }
+}
+
 
 // Showcase
 #showcase {
@@ -364,12 +379,11 @@ form {
   }
 }
 
-
 // Contact
 #contact {
   padding: 60px 0;
   .contact-box {
-    background: $secondary-color;
+    background: $secondary-color;    
     color: #FFF;
     padding: 80px;
     margin: 20px;
@@ -398,8 +412,10 @@ form {
 .footer {
   background: #111;
   color: #fff;
-  padding: 20px 0;
+  padding: 40px 0 20px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 
   .container {
     max-width: 1200px;
@@ -412,6 +428,7 @@ form {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
 
     @media (max-width: 600px) {
       flex-direction: column;
@@ -467,12 +484,12 @@ form {
 // WhatsApp Button
 .whatsapp-button {
   position: fixed;
-  bottom: 1.5rem; // 24px
-  right: 1.5rem;  // 24px
-  z-index: 999;
-  background-color: #25D366; // Color oficial de WhatsApp
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background-color: #25D366;
   color: #fff;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-size: 1.5rem;
@@ -481,13 +498,13 @@ form {
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
 
+  i {
+    pointer-events: none;
+  }
+
   &:hover {
     background-color: darken(#25D366, 10%);
     transform: scale(1.05);
-  }
-
-  i {
-    pointer-events: none; // Previene clics en el ícono
   }
 }
 
