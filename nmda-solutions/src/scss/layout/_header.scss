@@ -1,0 +1,65 @@
+@use '../abstracts/index.scss' as *;
+
+// Main Header
+#mainheader {
+  color: #FFF;  
+  h1 {
+    font-weight: 200;
+    padding-top: 60px;
+    padding-bottom: 30px;    
+  }
+} // End #mainheader
+
+// Navbar
+#navbar {
+  background-color: $primary-color;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container-logo {
+    display: flex;
+    align-items: center;
+
+    img.logo {
+      height: 70px;
+      width: auto;
+      max-height: 80px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      .btn {
+        color: $primary-color;
+      }
+
+      a {
+        display: block;
+        padding: 10px 15px;
+        text-align: center;
+        color: #FFF;
+        transition: all 0.3s ease;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

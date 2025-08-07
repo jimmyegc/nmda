@@ -1,0 +1,35 @@
+@use '../abstracts/index.scss' as *;
+
+// Contact
+#contact {
+  padding: 60px 0;
+  .contact-box {
+    background: $secondary-color;    
+    color: #FFF;
+    padding: 80px;
+    margin: 20px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    h6, h2 {
+      color: #FFF;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      padding: 20px 0;
+    }
+    form {
+      padding-top: 50px;
+      width: 60%;
+      margin: 0 auto;
+      .mx-auto {
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        width: 100%;
+        text-transform: uppercase;
+      }
+    }  // End #contact .contact-box form
+  } // End #contact .contact-box
+} // End #contact

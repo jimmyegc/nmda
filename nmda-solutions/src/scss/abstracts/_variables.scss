@@ -1,0 +1,13 @@
+$font-stack: 'Montserrat', sans-serif;
+$primary-color: #EC5C2C;
+$secondary-color: #29285A;
+$third-color: #F18C6B;
+$gray-color: #f9f9f9;
+
+:export {
+  font-stack: $font-stack;
+  primary-color: $primary-color;
+  secondary-color: $secondary-color;
+  third-color: $third-color;
+  gray-color: $gray-color;
+}

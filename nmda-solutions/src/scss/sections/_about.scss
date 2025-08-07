@@ -1,0 +1,21 @@
+@use '../abstracts/index.scss' as *;
+
+// About
+#about {
+  padding: 50px 0;
+  background: $gray-color;
+  .about-row {
+    padding-top: 30px;
+    display: flex;
+    &-box { 
+      padding: 20px;
+      img {
+        width: 400px;
+        padding-right: 20px;
+        padding-top: 50px;          
+        border-top-right-radius: 80px;
+        border-bottom-left-radius: 40px;
+      }
+    } // End #about .about-row &-box
+  } //  End #about-row
+} // End #about

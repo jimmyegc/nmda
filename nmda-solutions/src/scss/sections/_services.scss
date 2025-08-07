@@ -1,0 +1,35 @@
+@use '../abstracts/index.scss' as *;
+
+// Services
+#services {
+  padding: 60px 0;
+  h2, h6 {
+    text-align: center;
+  }
+  .services-row {
+    padding-top: 30px;
+    display: flex;
+    &-box {
+      padding: 30px; 
+      margin: 20px;
+      background: $gray-color;
+      box-shadow: 2px 2px 2px rgba(0,0,0, 0.2);
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: translateY(-5px);
+      }
+      img {
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+      } 
+      h4 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 500;
+      }
+    } // End #services .services-row &-box
+  } // End #services .services-row
+} // End #services

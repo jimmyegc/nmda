@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
     <meta
       name="description"
       content="Impulsa tu negocio con diseño web de alto impacto y estrategias UX/UI. Trabajamos con startups y empresas para crear experiencias digitales irresistibles."
@@ -14,50 +16,61 @@
     <meta name="author" content="nmda" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
+    <!-- SEO -->
     <meta name="theme-color" content="#000000" />
-    <title>nmda | Desarrollamos Webs y Apps para Potenciar tu Negocio</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon-16x16.png"
-    />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <title>nmda | Desarrollamos Webs y Apps para Potenciar tu Negocio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
   </head>
   <body>
     <header id="mainheader">
       <nav id="navbar">
         <div class="container">
           <div class="container-logo">
-            <img class="logo" src="./img/nmda.png" alt="Logo NMDA" />
+            <a href="/">
+              <img
+                class="logo"
+                src="./img/nmda.png"
+                alt="Nmda Solutions logo"
+              />
+            </a>
           </div>
           <ul>
             <li><a href="#mainheader">Inicio</a></li>
-            <li><a href="#services">Servicios</a></li>
             <li><a href="#about">Nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
             <li><a href="#contact" class="btn btn-light">Contáctanos</a></li>
           </ul>
         </div>
       </nav>
-      <div id="showcase">
-        <div class="container">
+      <div id="showcase" class="hero-video">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video__bg"
+          poster="./img/video-fallback.png"
+        >
+          <source
+            src="./video/14146544_1280_720_25fps.mp4"
+            type="video/mp4"
+            media="(min-width: 768px)"
+          />
+          Tu navegador no admite la etiqueta de video.
+        </video>
+        <div class="hero-video__overlay"></div>
+        <div class="hero-video__content container">
           <h1 class="display-1">
             Impulsamos tu negocio <br />
             con tecnología y diseño innovador.
@@ -70,6 +83,35 @@
         </div>
       </div>
     </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-row">
+          <div class="about-row-box">
+            <img
+              src="./img/pexels-mizunokozuki-12902874.jpg"
+              srcset="
+                ./img/pexels-mizunokozuki-12902874.jpg  600w,
+                ./img/pexels-mizunokozuki-12902874.jpg 1200w
+              "
+              sizes="(max-width: 600px) 100vw, 50vw"
+              alt="Personas trabajando en equipo"
+            />
+          </div>
+          <div class="about-row-box">
+            <h6>Sobre Nosotros</h6>
+            <h2>Expertos en desarrollo digital y diseño estratégico</h2>
+            <p>
+              En nmda, creemos en el poder de la tecnología para hacer crecer
+              negocios. Somos un equipo de expertos en desarrollo web, diseño
+              UX/UI y estrategias digitales. Nos apasiona crear soluciones
+              innovadoras que generan impacto y ayudan a nuestros clientes a
+              alcanzar sus objetivos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="services">
       <div class="container">
@@ -119,35 +161,6 @@
             <p>
               Desarrollamos plataformas SaaS escalables y seguras, permitiendo a
               las empresas ofrecer soluciones digitales eficientes en la nube.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <div class="about-row">
-          <div class="about-row-box">
-            <img
-              src="./img/pexels-mizunokozuki-12902874.jpg"
-              srcset="
-                ./img/pexels-mizunokozuki-12902874.jpg  600w,
-                ./img/pexels-mizunokozuki-12902874.jpg 1200w
-              "
-              sizes="(max-width: 600px) 100vw, 50vw"
-              alt="Personas trabajando en equipo"
-            />
-          </div>
-          <div class="about-row-box">
-            <h6>Sobre Nosotros</h6>
-            <h2>Expertos en desarrollo digital y diseño estratégico</h2>
-            <p>
-              En nmda, creemos en el poder de la tecnología para hacer crecer
-              negocios. Somos un equipo de expertos en desarrollo web, diseño
-              UX/UI y estrategias digitales. Nos apasiona crear soluciones
-              innovadoras que generan impacto y ayudan a nuestros clientes a
-              alcanzar sus objetivos.
             </p>
           </div>
         </div>
@@ -319,6 +332,52 @@
       </div>
     </section>
 
+    <!-- Portafolio -->
+    <section id="portafolio" class="portfolio">
+      <div class="portfolio__container">
+        <h6 class="portfolio__title">Proyectos recientes</h6>
+        <p class="portfolio__description">
+          Estos son algunos de nuestros trabajos más recientes para clientes
+          satisfechos.
+        </p>
+        <div class="portfolio__grid">
+          <div class="portfolio__item">
+            <img src="./img/portfolio-01.webp" alt="Proyecto 1" />
+            <div class="portfolio__content">
+              <h4 class="portfolio__subtitle">
+                Sitio corporativo para empresa de logística
+              </h4>
+              <p class="portfolio__text">
+                Desarrollado en 7 días con SEO optimizado.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <img src="./img/portfolio-02.jpg" alt="Proyecto 2" />
+            <div class="portfolio__content">
+              <h4 class="portfolio__subtitle">
+                Tienda online para marca de ropa
+              </h4>
+              <p class="portfolio__text">
+                Diseño personalizado + administrador de productos.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio__item">
+            <img src="./img/portfolio-03.jpg" alt="Proyecto 3" />
+            <div class="portfolio__content">
+              <h4 class="portfolio__subtitle">
+                Landing para coach de negocios
+              </h4>
+              <p class="portfolio__text">
+                Alta conversión + formulario conectado a WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="container">
         <div class="contact-box">
@@ -367,7 +426,7 @@
                 required
               ></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group mx-auto">
               <div>
                 <script src="https://www.google.com/recaptcha/api.js"></script>
                 <div
@@ -467,6 +526,7 @@
       </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,25 @@
+.whatsapp-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background-color: #25D366;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  i {
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: darken(#25D366, 10%);
+    transform: scale(1.05);
+  }
+}

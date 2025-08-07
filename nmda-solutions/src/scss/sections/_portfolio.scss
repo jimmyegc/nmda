@@ -1,0 +1,67 @@
+@use '../abstracts/index.scss' as *;
+
+.portfolio {
+  padding: 4rem 1.5rem;
+  background-color: white;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h6 {
+    color: $primary-color;
+    /* font-weight: 700; */
+  }
+
+  /* &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  } */
+
+  &__description {
+    color: darken($secondary-color, 10%);
+    margin-bottom: 1.5rem;         
+    font-size: 1rem;    
+    line-height: 1.7em;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    color: darken($secondary-color, 10%);;
+  }
+}

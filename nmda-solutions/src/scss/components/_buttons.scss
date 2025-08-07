@@ -1,0 +1,64 @@
+@use '../abstracts/index.scss' as *;
+
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-light {
+  background-color: #FFF;
+  color: $primary-color;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.btn-dark {
+  background-color: $primary-color;
+  border: none;
+  color: #FFF;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.button {
+  font-family: $font-stack;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: lighten($secondary-color, 5%);
+      box-shadow: 0 6px 16px rgba($secondary-color, 0.3);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+      box-shadow: 0 6px 16px rgba($primary-color, 0.2);
+    }
+  }
+}

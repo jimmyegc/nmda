@@ -1,0 +1,73 @@
+@use '../abstracts/index.scss' as *;
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;    
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__phone {
+    a {
+      font-size: 1.2rem;
+      color: #fff;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $gray-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__icon {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $gray-color;
+    }
+
+    i {
+      pointer-events: none; // Hace que el ícono no interrumpa el hover del link
+    }
+  }
+
+  &__location {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+
+  &__copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+}
