@@ -33,7 +33,68 @@
     <style></style>
   </head>
   <body>
+    <!-- Overlay oscuro -->
+    <div class="overlay"></div>
+
     <header id="mainheader">
+      <div id="navbar" class="navbar">
+        <div class="container">
+          <div class="container-logo">
+            <a href="/">
+              <img src="./img/nmda.png" alt="NMDA Logo" class="logo" />
+            </a>
+          </div>
+
+          <button class="hamburger" aria-label="Menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="#mainheader">Inicio</a></li>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#services">Planes y Precios</a></li>
+              <li><a href="#portfolio">Portafolio</a></li>
+              <li>
+                <a href="#contact" class="btn btn-outline">Contáctanos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="showcase" class="hero-video">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video__bg"
+          poster="./img/video-fallback.png"
+        >
+          <source
+            src="./video/14146544_1280_720_25fps.mp4"
+            type="video/mp4"
+            media="(min-width: 768px)"
+          />
+          Tu navegador no admite la etiqueta de video.
+        </video>
+        <div class="hero-video__overlay"></div>
+        <div class="hero-video__content container">
+          <h1 class="display-1">
+            Impulsamos tu negocio <br />
+            con tecnología y diseño innovador.
+          </h1>
+          <p class="large">
+            Creamos soluciones digitales a la medida para potenciar tu marca y
+            aumentar tu presencia en línea.
+          </p>
+          <a href="#contact" class="btn btn-light">Contáctanos</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- <header id="mainheader">
       <nav id="navbar">
         <div class="container">
           <div class="container-logo">
@@ -82,7 +143,7 @@
           <a href="#contact" class="btn btn-light">Contáctanos</a>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <section id="about">
       <div class="container">

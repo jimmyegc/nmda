@@ -1,0 +1,181 @@
+@use "../abstracts/index.scss" as *;
+
+// Variables
+$primary-color: #ec5c2c;
+$overlay-bg: rgba(0, 0, 0, 0.6);
+$text-color: #fff;
+
+#navbar {
+  background-color: $primary-color;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .container-logo {
+    img.logo {
+      height: 70px;
+      width: auto;
+      max-height: 80px;
+    }
+  }
+
+  // Menú desktop
+  .nav-menu {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          display: block;
+          padding: 10px 15px;
+          color: $text-color;
+          text-align: center;
+          transition: all 0.3s ease;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &.btn a {
+          background-color: #fff;
+          color: $primary-color;
+          padding: 8px 16px;
+          border-radius: 4px;
+          font-weight: bold;
+
+          &:hover {
+            background-color: lighten(#fff, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  // Botón hamburguesa (oculto en desktop)
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1101;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: $text-color;
+      border-radius: 2px;
+      transition: all 0.3s linear;
+      position: relative;
+      transform-origin: 1px;
+    }
+
+    &.active span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+    &.active span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Overlay general
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: $overlay-bg;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+// Responsive: mobile < 768px
+@media (max-width: 768px) {
+  #navbar {
+    // Mostrar botón hamburguesa en móvil
+    .hamburger {
+      display: flex;
+    }
+
+    // Ocultar menú desktop en móvil
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 75%;
+      max-width: 300px;
+      background-color: $primary-color;
+      flex-direction: column;
+      padding-top: 80px;
+      padding-left: 1.5rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 1100;
+
+      ul {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      &.open {
+        transform: translateX(0);
+        pointer-events: auto;
+        opacity: 1;
+      }
+
+      li {
+        a {
+          font-size: 1.2rem;
+        }
+
+        &.btn a {
+          background-color: #fff;
+          color: $primary-color;
+          padding: 12px 20px;
+          border-radius: 6px;
+
+          &:hover {
+            background-color: lighten(#fff, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  // Bloqueo scroll cuando menú abierto
+  body.menu-open {
+    overflow: hidden;
+  }
+}
