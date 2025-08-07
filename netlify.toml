@@ -1,0 +1,4 @@
+[build]
+  base = "nmda-solutions"
+  command = "npm run build"
+  publish = "dist"
