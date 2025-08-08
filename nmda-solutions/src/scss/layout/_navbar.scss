@@ -1,4 +1,5 @@
 @use "../abstracts/index.scss" as *;
+@use "sass:color";
 
 // Variables
 $primary-color: #ec5c2c;
@@ -50,17 +51,18 @@ $text-color: #fff;
           &:hover {
             text-decoration: underline;
           }
-        }
 
-        &.btn a {
-          background-color: #fff;
-          color: $primary-color;
-          padding: 8px 16px;
-          border-radius: 4px;
-          font-weight: bold;
+          &.btn-cta {
+            background-color: #fff;
+            color: $primary-color;
+            padding: 8px 16px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            font-weight: bold;
 
-          &:hover {
-            background-color: lighten(#fff, 10%);
+            &:hover {
+              background-color: color.adjust(#fff, $lightness: 10%);
+            }
           }
         }
       }
@@ -167,7 +169,7 @@ $text-color: #fff;
           border-radius: 6px;
 
           &:hover {
-            background-color: lighten(#fff, 10%);
+            background-color: color.adjust(#fff, $lightness: 10%);
           }
         }
       }

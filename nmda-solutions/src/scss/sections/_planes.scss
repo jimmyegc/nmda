@@ -1,11 +1,12 @@
-@use '../abstracts/index.scss' as *;
+@use "../abstracts/index.scss" as *;
+@use "sass:color";
 
 // Plans
 #plans {
   padding: 80px 0;
   text-align: center;
   background: $gray-color;
-  
+
   h6 {
     color: $primary-color;
     /* font-weight: 700; */
@@ -20,14 +21,14 @@
     max-width: 700px;
     margin: 10px auto 30px;
     font-size: 1.2rem;
-    color: darken($secondary-color, 10%);
+    color: color.adjust($secondary-color, $lightness: 10%);
   }
 
   .plans-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;    
+    gap: 30px;
   }
 
   .plan-box {
@@ -38,7 +39,7 @@
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
@@ -52,7 +53,7 @@
 
     p {
       font-size: 1rem;
-      color: lighten($secondary-color, 15%);
+      color: color.adjust($secondary-color, $lightness: 15%);
       margin-bottom: 15px;
     }
 
@@ -64,7 +65,7 @@
       li {
         font-size: 1rem;
         padding: 5px 0;
-        color: darken($third-color, 10%);
+        color: color.adjust($third-color, $lightness: 10%);
       }
     }
 

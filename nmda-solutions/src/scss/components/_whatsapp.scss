@@ -1,9 +1,11 @@
+@use "sass:color";
+
 .whatsapp-button {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
   z-index: 1000;
-  background-color: #25D366;
+  background-color: #25d366;
   color: #fff;
   padding: 0.8rem;
   border-radius: 50%;
@@ -19,7 +21,7 @@
   }
 
   &:hover {
-    background-color: darken(#25D366, 10%);
+    background-color: color.adjust(#25d366, $lightness: 10%);
     transform: scale(1.05);
   }
 }

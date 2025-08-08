@@ -1,4 +1,5 @@
-@use '../abstracts/index.scss' as *;
+@use "../abstracts/index.scss" as *;
+@use "sass:color";
 
 .portfolio {
   padding: 4rem 1.5rem;
@@ -9,7 +10,7 @@
     margin: 0 auto;
     text-align: center;
   }
-  
+
   h6 {
     color: $primary-color;
     /* font-weight: 700; */
@@ -22,9 +23,9 @@
   } */
 
   &__description {
-    color: darken($secondary-color, 10%);
-    margin-bottom: 1.5rem;         
-    font-size: 1rem;    
+    color: color.adjust($secondary-color, $lightness: 10%);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
     line-height: 1.7em;
   }
 
@@ -62,6 +63,6 @@
 
   &__text {
     font-size: 0.875rem;
-    color: darken($secondary-color, 10%);;
+    color: color.adjust($secondary-color, $lightness: 10%);
   }
 }
